@@ -39,16 +39,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                int pos = position;
-//                String cont = (String) listView.getItemAtPosition(position);
-//                Toast.makeText(getApplicationContext(),"You pressed Post #"+(pos+1), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
-
     private void createData() {
         PostData dataList=null;
         listData = new PostData[20];
