@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.root.simmplelistviewer.R;
 
 import DataMode.PostData;
+import DataMode.UserData;
 
 public class PostAdapter extends ArrayAdapter<PostData>{
     Activity myContext;
