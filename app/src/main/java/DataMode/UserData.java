@@ -2,7 +2,6 @@ package DataMode;
 
 import io.objectbox.annotation.Entity;
 
-@Entity
 public class UserData {
     public int userId;
     public String userName;

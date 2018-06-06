@@ -12,9 +12,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import Adapter.PostAdapter;
 import DataMode.PostData;
+import io.objectbox.Box;
+import io.objectbox.BoxStore;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
@@ -28,9 +29,14 @@ public class MainActivity extends AppCompatActivity {
         this.createData();
         PostAdapter pAdapter = new PostAdapter(this,R.layout.my_list_row,listData);
         listView.setAdapter(pAdapter);
+        BoxStore boxstore = MyApp.getSession().getMyBoxStore();
+        Box<PostData> postBox = boxstore.boxFor(PostData.class);
+        PostData postData = new PostData();
+        postData.setPostTitle("Post 1");
+        postData.setPostContent("Post Content 1");
+        postBox.put(postData);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
