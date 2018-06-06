@@ -6,16 +6,16 @@ import io.objectbox.annotation.Id;
 @Entity
 public class PostData {
  @Id(assignable = true)
- public long Id;
+ public long id;
  public String postTitle;
  public String postContent;
 
  public long getId() {
-  return Id;
+  return id;
  }
 
  public void setId(long id) {
-  Id = id;
+  id = id;
  }
 
  public String getPostContent() {

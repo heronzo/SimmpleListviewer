@@ -19,10 +19,6 @@
         {
           "id": "3:8972344149842019536",
           "name": "postContent"
-        },
-        {
-          "id": "4:5667012711249951033",
-          "name": "postDate"
         }
       ],
       "relations": []
@@ -40,7 +36,8 @@
   "retiredIndexUids": [],
   "retiredPropertyUids": [
     8894862273800613311,
-    7514801638032806468
+    7514801638032806468,
+    5667012711249951033
   ],
   "retiredRelationUids": [],
   "version": 1
