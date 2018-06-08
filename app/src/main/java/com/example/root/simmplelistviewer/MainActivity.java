@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list);
         this.createData();
         PostAdapter pAdapter = new PostAdapter(this,R.layout.my_list_row,listData);
-        listView.setAdapter(pAdapter);
         BoxStore boxstore = MyApp.getSession().getMyBoxStore();
         Box<PostData> postBox = boxstore.boxFor(PostData.class);
         PostData postData = new PostData();
